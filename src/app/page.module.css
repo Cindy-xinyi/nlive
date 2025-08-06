@@ -1,0 +1,122 @@
+/* app/page.module.css */
+
+.main {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Hero 區塊 */
+.hero {
+  background-image: url("/covers/relax/relax3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heroContent {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 48px;
+  border-radius: 16px;
+}
+
+.heroTitle {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.heroSubtitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.heroButton {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: #ddd;
+}
+
+/* 純展示功能區 */
+.featuresSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 6rem 1rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.featuresSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 方塊樣式 + 漸層邊框特效 */
+.featureItem {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* 邊框粗細 */
+  background: linear-gradient(135deg, #531a27, #000000, #531a27);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.featureItem:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(83, 26, 39, 0.6);
+}
+
+.featureItem span {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.featureItem h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+/* 漸層過渡區：深酒紅 → 黑 → 深酒紅 */
+.gradientSection {
+  height: 4rem;
+  width: 100%;
+  background: linear-gradient(90deg, #531a27 0%, #000000 50%, #531a27 100%);
+  margin-top: 2rem;
+}

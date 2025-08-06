@@ -1,0 +1,81 @@
+.cardContainer {
+  flex: 0 0 220px;
+  margin: 0 8px;
+  transition: flex-basis 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+.expanded {
+  flex-basis: 330px;
+}
+
+.imageWrapper {
+  position: relative; /* ✅ 這句非常關鍵，讓絕對定位的按鈕能對齊 */
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.albumImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+.favoriteButton:hover {
+  transform: scale(1.2);
+}
+
+.playButton {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: #fff;
+  z-index: 2;
+}
+.playButton:hover {
+  transform: scale(1.2);
+}
+
+.info {
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+}
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.category {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.description {
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: 0.8;
+}

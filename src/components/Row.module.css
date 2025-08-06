@@ -1,0 +1,51 @@
+.rowWrapper {
+  position: relative;
+  overflow: visible;
+  margin-bottom: 40px;
+}
+
+.rowTitle {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-left: 32px;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 10px 32px;
+  gap: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  z-index: 5;
+}
+.rowWrapper:hover .arrowButton {
+  opacity: 1;
+}
+.arrowLeft {
+  left: 0;
+}
+.arrowRight {
+  right: 0;
+}

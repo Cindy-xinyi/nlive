@@ -1,0 +1,151 @@
+/* ===== NAVBAR 基本布局 ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== 左側 ===== */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.navLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.2s ease;
+}
+.navLinks a:hover {
+  opacity: 0.7;
+}
+
+/* ===== 右側 Icons ===== */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* ===== 搜尋對話框 ===== */
+.searchBox {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transform: translateY(8px);
+  background: #000;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  z-index: 20;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  width: 200px;
+  font-size: 14px;
+  color: #fff;
+  padding: 4px 0;
+}
+.searchInput::placeholder {
+  color: #ccc;
+}
+
+/* ===== 通用下拉容器（深色版）===== */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transform: translateY(8px);
+  background: #000; /* 改為黑色背景 */
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 20;
+  min-width: 180px;
+}
+
+.dropdownItem {
+  width: 100%;
+  background: #000;
+  color: #fff; /* 白字 */
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  display: block;
+}
+
+/* hover 效果 */
+.dropdownItem:hover {
+  background: #222;
+  color: #00aaff;
+}
+
+/* ===== 個人資料與登出通用樣式 ===== */
+.profileItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+
+.profileIcon {
+  font-size: 18px;
+  flex-shrink: 0;
+  color: #fff; /* 預設為白色 */
+}
+
+/* hover 時 icon 變藍 */
+.profileItem:hover .profileIcon {
+  color: #00aaff;
+}
