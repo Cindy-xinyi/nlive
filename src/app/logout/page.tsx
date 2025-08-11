@@ -1,6 +1,7 @@
 // src/app/logout/page.tsx
 "use client";
 
+import Link from "next/link";
 import styles from "./logout.module.css";
 
 export default function LogoutPage() {
@@ -8,9 +9,9 @@ export default function LogoutPage() {
     <div className={styles.container}>
       <div className={styles.card}>
         <p className={styles.message}>你已經成功登出</p>
-        <a href="/" className={styles.link}>
+        <Link href="/" className={styles.link}>
           回到首頁
-        </a>
+        </Link>
       </div>
     </div>
   );
